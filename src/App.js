@@ -29,7 +29,7 @@ function App() {
           type="text"
           name="firstname"
           onChange={formik.handleChange}
-          value={formik.values.email}
+          value={formik.values.firstname}
         />
 		<div>Last Name:</div>
         <input
@@ -37,7 +37,7 @@ function App() {
           type="text"
           name="lastname"
           onChange={formik.handleChange}
-          value={formik.values.email}
+          value={formik.values.lastname}
         />
 		<div>Email:</div>
         <input
