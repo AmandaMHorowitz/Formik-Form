@@ -4,6 +4,8 @@ import {useFormik} from "formik";
 function App() {
   const formik = useFormik({
     initialValues: {
+	  firstname: "",
+	  lastname: "",
       email: "",
       password: "",
     },
@@ -21,7 +23,23 @@ function App() {
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
-        <div>Email:</div>
+        <div>First Name:</div>
+        <input
+          id="fNameField"
+          type="text"
+          name="firstname"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
+		<div>Last Name:</div>
+        <input
+          id="lNameField"
+          type="text"
+          name="lastname"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
+		<div>Email:</div>
         <input
           id="emailField"
           type="email"
